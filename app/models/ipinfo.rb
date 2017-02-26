@@ -1,0 +1,2 @@
+class Ipinfo < ApplicationRecord
+end

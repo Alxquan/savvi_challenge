@@ -1,0 +1,11 @@
+<h2>Lookup another IP or URL</h2>
+<%= simple_form_for @ipinfo do |f| %>
+  <%= f.input :other_ip_address %>
+  <%= f.submit 'Lookup IP or URL', class: 'btn btn-primary' %>
+<% end %>
+
+<h2>Lookup your own IP</h2>
+<%= simple_form_for @ipinfo do |f| %>
+  <% f.input :personal_ip_address %>
+  <%= f.submit 'Lookup own IP', class: 'btn btn-success' %>
+<% end %>

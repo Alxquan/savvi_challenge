@@ -1,0 +1,2 @@
+module IpinfoHelper
+end
