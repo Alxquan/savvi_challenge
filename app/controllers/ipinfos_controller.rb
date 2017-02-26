@@ -1,4 +1,4 @@
-class IpinfoController < ApplicationController
+class IpinfosController < ApplicationController
   require 'curb'
 
   def new
@@ -7,9 +7,15 @@ class IpinfoController < ApplicationController
 
 
   def index
+    @ipinfos = Ipinfo.all
+
   end
 
-  def show
+  def create
+    @ipinfo = Ipinfo.new(ipinfo_params)
+    if @ipinfo.save
+      redirect_to root_url, notice: 'Hi'
+    end
   end
 
   private
@@ -17,5 +23,6 @@ class IpinfoController < ApplicationController
   def ipinfo_params
     params.require(:ipinfo).permit(:other_ip_address, :personal_ip_address)
   end
+
 
 end
