@@ -8,7 +8,9 @@ class IpinfosController < ApplicationController
 
   def index
     @ipinfos = Ipinfo.all
+  end
 
+  def show
   end
 
   def create
